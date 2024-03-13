@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background-image: url('static/images/Disease wallpaper.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.banner {
+  background-color: None;
+  color: black;
+  font-size: 3rem;
+  margin-top: 20vh;
+}
+
+.animate-down-once div {
+  height: 5rem;
+  margin-bottom: -5rem;
+  opacity: 0;
+  text-align: center;
+}
+
+.animate-down-once div:nth-child(1), .animate-down-once div:nth-child(2) {
+  animation: slideDownThrough 9s linear 3s 1;
+}
+.animate-down-once div:nth-child(2) {
+  animation-delay: 6s;
+}
+.animate-down-once div:nth-child(3) {
+  animation: slideDownIn 3s linear 9s 1 forwards;
+}
+
+@keyframes slideDownThrough {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  17% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1vh 3vw 0;
+  color: white;
+  width: 60vw;
+  font-size: 20px;
+  margin-top: -30vh;
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    font-size: 16px;
+    width: 90vw;
+  }
+}
